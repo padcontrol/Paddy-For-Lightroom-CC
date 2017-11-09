@@ -14,38 +14,42 @@ Sure you don't want to just use a different option?
 
 * Paddy, the last LR5 beta, already installed and working for you in LR 5.x. It should have been obtained from sourceforge, Paddy.lrdevplugin 5.2Beta2.zip.
 * Even in LR 5.x, some sliders will not focus correctly with Paddy-LR5 if you did changes such as changing Tone Curve items.
-* Have LR CC 6 working, but Paddy disabled (Paddy-LR5 should complain and not want to start)
-* LR set to English. The old code attempted to be multi-language. On examination, even the German preferred translations in Paddy-LR5 were lagging and items still existed that were hardcoded. All other languages were in disarray.
-* Your LR interface is set to all panels active, and "Expand all panels". Not solo mode.
+* Have LR CC 6 working, but Paddy disabled (Paddy-LR5 should complain and not want to start). Have a test catalog of one image.
+* LR set to English. The old code attempted to be multi-language. On examination, even the German preferred translations in Paddy-LR5 were lagging and items still existed that were hardcoded. All other languages were in disarray. Paddy was bound to ANSI and no UTF/Unicode support.
+* IMPORTANT: Your LR interface (Library and Develop) should be set to all panels active, and all of them open. aka "Expand all panels". Not solo mode.
 * You should have a "dummy/test/virtual copy" image that you last open/close your catalog with. Paddy's "pokes" on the UI can inadvertently create some items on your history stack 
 
 #  IF YOU REALLY WANT TO.
 
-Here's how. No whining. The steps are intentional as part of your intent to do this. If you think the steps are wrong, do a screen recording showing Paddy-LR5 working in LR5 for you, and then from the start of the steps below to prove it to me, and I'll respond.
+A binary diff is provided to patch.
+
+10 steps to create one .exe? Why was it not uploaded? The steps are intentional to ensure your intent and will to want this. After you create the paddy.exe and want to distribute it on another github/sourceforge, that's your call. I did not want to deal with support issues with people just trying it for fun.
+
+If you think the steps are wrong, do a screen recording showing Paddy-LR5 working in LR5 for you, then starting LR6 with Paddy complaining, then Paddy being disabled in plugin manager; follwed with a recording from the start of the steps below to show that you followed did every step and it failed to run, I'll consider it an issue to be perhaps dealt with; just create an Issue and link to the video.
 
 1) Ensure Requirements and Recommendations above have been followed.
 
-2) You must have the right Paddy 5. To check, in your %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\Paddy\, there is Paddy.exe. It MUST have a sha-1sum of 81828baf0abaaa99a2d2ee24b38435b56c29cb4a or sha-256 of 90007515a4815c91207d769d1f4d8623c279ddbc2b0735f4ba9f6b2c99eae0e9. If you are unsure how to check a hash, upload your paddy.exe to http://www.virustotal.com. On the detail page, you should see "SHA-256	90007515a4815c91207d769d1f4d8623c279ddbc2b0735f4ba9f6b2c99eae0e9" IF THE SHA-256 SUM IS DIFFERENT. YOU HAVE AN INCOMPATIBLE LR5 Paddy. Recheck.
+2) You must have the right Paddy 5. To check, in your %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\Paddy\, there is a Paddy.exe. It MUST have a sha-1sum of 81828baf0abaaa99a2d2ee24b38435b56c29cb4a or sha-256 of 90007515a4815c91207d769d1f4d8623c279ddbc2b0735f4ba9f6b2c99eae0e9. If you are unsure how to check a hash, upload your paddy.exe to http://www.virustotal.com. On the detail page, you should see "SHA-256	90007515a4815c91207d769d1f4d8623c279ddbc2b0735f4ba9f6b2c99eae0e9" IF THE SHA-256 SUM IS DIFFERENT. YOU HAVE AN INCOMPATIBLE LR5 Paddy. Recheck.
 
 For example. https://www.virustotal.com/#/file/90007515a4815c91207d769d1f4d8623c279ddbc2b0735f4ba9f6b2c99eae0e9/details
 
-2) You will need jojodiff, a binary diff/patch utility. https://sourceforge.net/projects/jojodiff/ Download, extract the files somewhere. Let's call it c:\jojodiff. There should be a file called jptch.exe
+3) You will need jojodiff, a binary diff/patch utility. https://sourceforge.net/projects/jojodiff/ Download, extract the files somewhere. Let's call it c:\jojodiff. There should be a file called jptch.exe
 
-2)  BACKUP your %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\ This patched version WILL NOT work for 5.x. You will need your backup.
+4)  BACKUP your %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\ This patched version WILL NOT work for 5.x. You will need your backup.
 
-3) Download paddy5-to-6-patch.jojodiff from here. To c:\jojodiff as well
+5) Download paddy5-to-6-patch.jojodiff from here. To c:\jojodiff as well
 
-4) Make a copy of your paddy.exe to c:\jojodiff as well, and rename it Paddy5.exe
+6) Make a copy of your paddy.exe to c:\jojodiff as well, and rename it Paddy5.exe
 
-5) Open a Command Prompt (e.g. win+r key, enter cmd.exe), enter these two lines, changing the directories if you used something other than c:\jojodiff
+7) Open a Command Prompt (e.g. win+r key, enter cmd.exe), enter these two lines, changing the directories if you used something other than c:\jojodiff
 cd /d c:\jojodiff
 jptch.exe Paddy5.exe paddy5-to-6-patch.jojodiff paddy.exe
 
-6) Check that your new paddy.exe is correct (hash yourself or with virustotal.com). This paddy.exe for LR6 CC 2015 should be:sha1sum 3c29dff5905ae8f2e20331abd960d3034915d3a1SHA-256	60fc316ad7a9d0c67fff5e1276f7c26d54d7043ac0293859f1ef5599d0bdbc22
+8) Check that your new paddy.exe is correct (hash yourself or with virustotal.com). This paddy.exe for LR6 CC 2015 should be:sha1sum 3c29dff5905ae8f2e20331abd960d3034915d3a1 or SHA-256	60fc316ad7a9d0c67fff5e1276f7c26d54d7043ac0293859f1ef5599d0bdbc22
 
 For example. https://www.virustotal.com/#/file/60fc316ad7a9d0c67fff5e1276f7c26d54d7043ac0293859f1ef5599d0bdbc22/details
 
-7) Copy this new paddy.exe from c:\jojodiff and overwrite (WARNING: you should have backed up) the one in %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\Paddy\
+9) Copy this new paddy.exe from c:\jojodiff and overwrite (WARNING: you should have backed up in step 4) the one in %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\Paddy\
 
-8) Fire up LR6 CC 2015. Paddy should not complain about not being in LR5. Be patient and let it do it's scanning. If Paddy starts in suspended mode (paddy icon with a strikethrough in the task icon area), right click on the icon and restart it. When done, you should be set to use it just like you did with LR5. In the assignment preferences, you should have one new option that allows you to assign a hotkey to selecting the Dehaze slider.
+10) Fire up LR6 CC 2015. Enable Paddy from plugin manager. Paddy should no longer complain about not being in LR5. Be patient and let it do it's UI scanning. If Paddy starts in suspended mode (paddy icon with a strikethrough in the task icon area), right click on the icon and restart it. When done, you should be set to use it just like you did with LR5. In the assignment preferences, you should have one new option that allows you to assign a hotkey to selecting the Dehaze slider.
 

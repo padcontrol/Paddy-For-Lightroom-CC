@@ -1,0 +1,315 @@
+; For LR 4.1 RC2
+; Control Variables
+; use the _get window class names script to get a list of AfxWnd100u Class and numbers
+;  for the sub panels in development , you are looking for something like this
+;  ClassNN     		Text				Visible
+;  AfxWnd100u235   Accordion Content   1
+;  AfxWnd100u236   Basic 			  1
+;  AfxWnd100u237   Collapsible Section   1
+;  AfxWnd100u238   Basic   				0
+;
+;  The first occurance of "Basic" is the title bar. This will always be visible.
+;  The second occurance is the collapsible section. here, AfxWnd100u238 is only visible if the side panel is visible
+;
+
+class := "AfxWnd100u"
+click_for_finish_slider_event := class . "86"
+
+sidebar_list=basic,TC,hsl,st,detail,LC,effects,cameracalib
+;these are only true in develop!
+; and unfortunately, anything below HSL can have two values
+; numbers below are for HSL
+; B&W delta is a constant
+; 4.0 beta
+sidebar_basic:=529
+sidebar_TC:=571
+sidebar_hsl:=595
+sidebar_st:= 631
+sidebar_detail:=649
+sidebar_LC:=671
+sidebar_effects:=699
+sidebar_cameracalib:=613
+
+; these have deltas based on what HSL panel is open
+; 1  full mode with HSL "all" open
+; 2  color mode with single color
+; 3  color mode, all color
+; 4  HSL, but not "all"
+; 5   B&W panel open
+Sidebar_delta_1 := 0
+Sidebar_delta_2 := -25
+Sidebar_delta_3 := 10
+Sidebar_delta_4 := -20
+Sidebar_delta_5 := -22
+
+
+
+; similarly, these are used to determine if panels are open
+right_panel_develop :=class . "83"
+right_panel_library_number:=127
+right_panel_library :=class . right_panel_library_number ; depends on number of publish services used! min around 100
+
+left_panel_develop  :=class . "44"
+left_panel_library :=class . "45"
+
+module_picker := class . "4"
+filmstrip_panel := class . "13"
+
+
+
+
+keywording_panel_number := right_panel_library_number + 19
+keywording_panel:= class . keywording_panel_number
+library_filter_panel := class . "251"
+
+
+; tools
+tool_list=brush,grad_filter,red_eye,clone_heal,crop
+Brush_panel :=class . "151" ; old: 360
+grad_filter_panel :=class . "237" ; old:443
+red_eye_panel :=class . "123" ; old: 331
+clone_heal_panel:= class . "136"
+crop_panel := class . "112" ; old: 320
+
+
+/*
+testing the process type in library
+the buttons change there
+and we do not have easy access to the combobox we like
+so, need a better one
+this is the panel that is visible if it's the 2010 process
+*/
+
+; library_is_2010 := class . "143"
+library_is_2010 := "button46"
+
+; Various in tools - 4.0 beta
+
+WB_combobox_develop:="ComboBox15"
+WB_combobox_library:="ComboBox7"
+
+crop_aspect_ratio_control := "combobox5" ; setting the crop aspect ratio
+crop_lock := class . "117" ; locking crop ratio
+
+angle_tool_control := class . "119" ; Angle tool in Crop
+crop_frame_tool_control := class . "116" ; crop frame tool
+
+gradient_tool_toggle := "Button49"
+red_eye_toggle := "Button28"
+
+TC_toggle:="button84"
+HSL_toggle:="button89"
+HSL_toggle:="button89"
+st_toggle:=16 ; this is a number! it is the delta between the button that syas "calibration" and this (negative). Paddy needs this as below the HSL panel, references are relative, not absolute!
+detail_toggle:=14
+lc_toggle:=10
+effects_toggle:=2
+
+; for the adjustment brush - 4.0 beta
+
+brush_preset_control :="ComboBox11"
+brush_size_control	 :="Edit46"
+brush_feather_control:="Edit47"
+brush_flow_control	 :="Edit48"
+brush_density_control	:="Edit49"
+brush_automask_control	:="Button43"
+gradient_box_control	:="ComboBox13"
+gradient_exposure_button_control := "Static140"
+new_brush := "Button38" ; button for new brush
+new_filter:="Button47" ; button for new filter
+
+adjustment_brush_A := "Button40"
+adjustment_brush_B := "Button41"
+adjustment_brush_Erase := "Button42"
+adjustment_brush_automask := "Button43"
+adjustment_brush_toggle := "Button44"
+
+; tone curve drop down - 4.0 beta
+TC_combo_box := "ComboBox19"
+
+; camera profile box - 4.0
+camera_profile_box:="ComboBox26"
+
+defringe_combo_box := "ComboBox24"
+process_combo_box:="ComboBox25" ; box with process name
+
+; preset box in library - 4.0 beta
+library_preset_box_control := "ComboBox4"
+
+; Filter preset box in library- 4.0 beta
+library_filter_box_control := "ComboBox13"
+
+
+spot_removal_clone := "Button33"
+spot_removal_heal := "Button34"
+spot_removal_toggle := "Button35"
+
+
+; contrain to warp in crop
+constrain_to_warp_button:="Button52"
+
+
+;
+; for HSL clicker - 4.0 beta
+;
+wb_reset_button := "Static299"
+tone_reset_button := "Static312"
+presence_reset_button:="Static319"
+TC_reset_button :="Static327"
+bw_reset_button :="Static339" ; only when BW panel open!
+bw_button:= "Button92"
+BW_auto_button := "Button95"
+
+; the following only numbers as they change dynamically
+ST_HL_reset_button :=370 ; for mode with HSL panel all open!
+ST_sh_reset_button :=375 ; for mode with HSL panel all open!
+sharp_reset_button :=379 ; for mode with HSL panel all open!
+NR_reset_button :=385 ; for mode with HSL panel all open!
+LC_transform_reset_button :=410 ; for mode with HSL panel all open!
+LC_vignette_reset_button :=416 ; for mode with HSL panel all open!
+; LC_CA_reset_button :=216 ; for mode with HSL panel all open! gone in 4.0 beta
+PCV_reset_button :=420 ; for mode with HSL panel all open!
+Grain_reset_button :=427 ; for mode with HSL panel all open!
+
+cc1_reset_button:= 434 ; camera calibration
+cc2_reset_button:= 436
+cc3_reset_button:= 438
+cc4_reset_button:= 4440
+
+
+reset_crop_button:="Button26"
+Reset_red_eye_button:="Button29"
+Reset_Spot_Removal_button:="Button36"
+reset_brush_button:="Button45"
+reset_grad_filter_button:="Button50"
+close_spot_removal_button:="Button37"
+Close_Adjustment_Brush_button:="Button46"
+Close_graduated_filter_button:="Button51"
+Close_Crop_button:="Button27"
+Close_red_eye_button:="Button57"
+
+
+
+
+; Buttons needed to force the HSL mode we want - 4.0 beta
+
+hsl_button1 := "Button90"
+hsl_button2 := "Button80" ; unused??
+all_button := "Button97"
+bw_button1 := "Button92"
+bw_button2:= "Button81" ; button in basic panel
+color_button := "Button91"
+color_button2:="Button80" ; button in basic panel
+
+basic_static:=296 ; FOR hsl "all" mode
+tc_static:=324 ; FOR hsl "all" mode
+split_static:=369 ; FOR hsl "all" mode
+detail_static:=378 ; FOR hsl "all" mode
+LC_static :=391 ; FOR hsl "all" mode
+effects_static:=419 ; FOR hsl "all" mode
+cc_static:=431 ; FOR hsl "all" mode
+
+
+; buttons for zoom
+zoom_fit:="Button8"
+zoom_fill:="button9"
+zoom_11:="Button10"
+
+
+
+
+
+
+;
+; constants for checking out the right panel - 4.0 beta
+; these are the different modes the right panel can be in
+; set by function check_right_panel_status
+; last slider is the index of the last slider in the current setup
+; calibration button is the number of the button that switches the calibration on and off
+; All sliders have index numbers relative to the largest possible
+; e.g., lastslider is 121
+; and the function move_slider adjusts appropriately
+; 1 : last slider = 252; calibration button = 116 ; full mode with HSL "all" open
+; 2 : last slider = 231; calibration button = 118  ; color mode with single color
+; 3 : last slider = 252; calibration button = 118  ; color mode, all color
+; 4 : last slider = 121; calibration button = 84   ; HSL, but not "all"
+; 5 : last slider = 234; calibration button = 111 ; B&W panel open
+
+rp_static_1 := 431     ;  is the button we check for 'Camera Calibration"
+last_slider_1 := 262	; number of the last slider
+slider_offset_1:=0		; offset from this scenario
+last_static_1 := 444 	; This is the last static available
+static_offset_1 :=0		; offset for static labels from this scenario
+calibration_button_1 := 117	; The button for the camera calibration panel on/off
+
+rp_static_2 := 405
+last_slider_2 := 241
+slider_offset_2:=-21
+last_static_2 := 418
+static_offset_2 :=-26
+calibration_button_2 := 119
+
+rp_static_3 := 433
+last_slider_3 := 262
+slider_offset_3:=0
+last_static_3 := 446
+static_offset_3 :=2
+calibration_button_3 := 119
+
+rp_static_4 := 413
+last_slider_4 := 246
+slider_offset_4:=-16
+last_static_4 := 426
+static_offset_4 :=-18
+calibration_button_4 := 115
+
+rp_static_5 := 410
+last_slider_5 := 246
+slider_offset_5:=-16
+last_static_5 := 423
+static_offset_5 :=-21
+calibration_button_5 := 112
+
+slider_threshold := 80 ; after slider 80, we need to adjust based on panel status
+slider_threshold_high := ; tbd, highest to be adjusted
+
+;
+; constants for selecting specific menu items
+; 4.0 beta
+;
+
+; export with presets (same for library and develop)
+; these entries must 1 less than the menu number (legacy)
+
+export_with_preset_menu := 0 ; in file menu
+Export_with_preset_entry := 12 ; normally in entry #14 but start early
+export_preset_menu_handle := 0 ; reset at start
+
+; flipping pictures
+flip_picture_main_develop = 4 ; menu #4
+flip_picture_horizontal_develop = 12 ; 12th entry in menu
+flip_picture_vertical_develop = 13 ; 13th entry in menu
+
+flip_picture_main_library = 4 ; menu #4
+flip_picture_horizontal_library = 16 ; 11th entry in menu
+flip_picture_vertical_library = 17 ; 12th entry in menu
+
+;
+; edit in
+;
+edit_in_main_develop := 4 ; photo menu ( starting at 1)
+edit_in_submenu_develop :=6 ; submenu 6
+
+edit_in_main_library := 4 ; photo menu ( starting at 1)
+edit_in_submenu_library :=8 ; submenu 8
+
+edit_in_photoshop := 1
+edit_in_other := 2
+open_smart_object := 4
+merge_to_panorama := 5
+merge_to_hdr :=6
+open_as_layers :=7
+
+; edit control for tags in library module - 4.0 beta
+tag_box := "EDIT1"
+tag_add_box:="Edit2"

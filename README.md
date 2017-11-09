@@ -8,7 +8,7 @@ A friend asked for help with making Paddy work with Lightroom CC (v6, 2015.x). T
 
 Went spaghetti code diving and patched up the last Paddy 5.x  beta release to make it work sufficiently for his and my test purposes. 
 
-Paddy was an admirable effort. Author "dorfl" had stated he was not a programmer. And the code echoed the statement. Inconsistent naming, mixture of repeated functions and inline, adding strings of text with numbers expecting numbers, all globals, etcetera. And unnecessarily complicated indirection layers.  It's easy to be distracted with new features, and it shows in the code. New features over bug fixes.  But it sorta worked. Author "dorfl" has moved on per the Paddy site. But it was CC BSD licensed, so we're going to have a crack at making it work.
+Paddy was an admirable effort. Author "dorfl" had stated he was not a programmer. And the code echoed the statement. Inconsistent naming, mixture of repeated functions and inline, adding strings of text with numbers expecting numbers, all globals, etcetera. And unnecessarily complicated indirection layers.  It's easy to be distracted with new features, and it shows in the code. New features over bug fixes.  But it sorta worked, with good intentions. Author "dorfl" has moved on per the Paddy site. But it was CC BSD licensed, so we're going to have a crack at making it work.
 
 Use at your own risk.  Attempt only for Lightroom CC 2015.13 (latest update as of October 2017).
 

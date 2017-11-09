@@ -1,6 +1,6 @@
 ## Paddy for Lightroom CC 
 
-### note: specifically Lightroom 6 CC 2015, not LR6 standalone, not LR CC Classic (v7)
+### note: specifically Lightroom CC 2015.x (v6.x such as 2015.13), not LR6 standalone, not LR Classic CC (v7.0.x)
 
 A friend asked for help with making Paddy work with Lightroom CC (v6, 2015.x).  I wanted to try out LRCC (had been staying with LR5), so why not.
 

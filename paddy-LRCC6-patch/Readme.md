@@ -21,7 +21,7 @@ Sure you don't want to just use a different option?
 
 #  IF YOU REALLY WANT TO.
 
-A binary diff is provided to patch.
+A binary diff is provided for patching via jojodiff utility
 
 10 steps to create one .exe? Why was it not uploaded? The steps are intentional to ensure your intent and will to want this. After you create the paddy.exe and want to distribute it on another github/sourceforge, that's your call. I did not want to deal with support issues with people just trying it for fun.
 

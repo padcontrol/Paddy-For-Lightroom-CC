@@ -1,6 +1,6 @@
 ## Paddy for Lightroom CC 
 
-Putting this out because it may help others that have workflows containing a lot of photos. Providing it without an easy install because you must really want it.
+Putting this patch out there because it may help others. Especially those with workflows containing a lot of photos. Providing it without an easy install because you must really want it.
 
 ### note: specifically Lightroom CC 2015.x (v6.x such as 2015.13), not LR6 standalone, not LR Classic CC (v7.0.x)
 

@@ -8,9 +8,9 @@ A friend asked for help with making Paddy work with Lightroom CC (v6, 2015.x). T
 
 Went spaghetti code diving and patched up the last Paddy 5.x  beta release to make it work sufficiently for his and my test purposes. 
 
-Paddy was an admirable effort. Author "dorfl" had stated he was not a programmer. And the code echoed the statement. Inconsistent naming, mixture of repeated functions and inline, adding strings of text with numbers expecting numbers, all globals, etcetera. And unnecessarily complicated indirection layers.  It's easy to be distracted with new features, and it shows in the code. New features over bug fixes.  But it sorta worked, with good intentions. Author "dorfl" has moved on per the Paddy site. But it was CC BSD licensed, so we're going to have a crack at making it work.
+Paddy was an admirable effort. Author "dorfl" had stated he was not a programmer. And the code echoed the statement. Inconsistent naming, mixture of functions and code blocks reused inline, adding strings of text with numbers expecting numbers, all globals, etcetera. And an unnecessarily complicated design with indirection layers, probably a second-system effect of sorts. Something that evolved from doing a task well to a distraction of new features, and it shows in the code. New features over bugs.  But it sorta worked, with good intentions. Author "dorfl" has moved on per the Paddy site. But it was CC BSD licensed, so we're going to have a crack at making it work.
 
-Use at your own risk.  Attempt only for Lightroom CC 2015.13 (latest update as of October 2017).
+So, use this patch at your own risk. Fixed to make run, target correct sliders, a few obvious bugs, that's it. Attempt only for Lightroom CC 2015.13 (latest update as of October 2017).
 
 Added as a test: selecting (not moving) the Dehaze slider as one of the Paddy commands.
 Fixed: some quirks that already existing with Paddy-LR5.

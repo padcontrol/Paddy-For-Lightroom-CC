@@ -2,7 +2,7 @@
 
 Are you sure you want to try this? Due to the nature of how Paddy works at startup (poking at menus), it can cause a lot of trouble.  And takes effort from you. There is no easy install provided, and extra hoops to hop through for you to intentionally do this.
 
-No assurances that it will work for you. Worked for one other person I know, worked for me. On Win7/LR CC v6 (2015.10), Win10/LR CC v6 (2015.10), Win10/LR CC v6 (2015.13, this is the last known update as of 2017 October); English. 
+No assurances that it will work for you. Worked for one other person I know, worked for me. Deveop mode. Library mode bugs were not patched. On Win7/LR CC v6 (2015.10), Win10/LR CC v6 (2015.10), Win10/LR CC v6 (2015.13, this is the last known update as of 2017 October); English. 
 
 Not tested and likely to have issues with LR6 non-CC version. 
 
@@ -14,7 +14,7 @@ Will very likely cause issues with LR Classic CC (version 7).
 * Even in LR 5.x, some sliders will not focus correctly with Paddy-LR5.
 * Have LR CC 6, but Paddy disabled (Paddy-LR5 should complain first start and exit itself). Have a test catalog of one image.
 * LR set to English. The old code attempted to be multi-language. On examination, even the German preferred translations in Paddy-LR5 were lagging and items still existed that were hardcoded. All other languages were in disarray. Paddy was bound to ANSI and no UTF/Unicode support.
-* IMPORTANT: Your LR interface (Library and Develop) should be set to all panels active, and all of them open. aka "Expand all panels". Not solo mode.
+* IMPORTANT: Your LR interface (Library and Develop) should be set to all panels active, and all of them open. aka "Expand all panels". Not solo mode. IMPORTANT: Any and all the sub panel items in Library/Dev mode should be expanded (all the little black triangles in any panels, such as Quck Develop -> Tone Control, should be pointed down) before attempted use.
 * You should have a "dummy/test/virtual copy" image that you last open/close your catalog with. Paddy's "pokes" on the UI can inadvertently create some items on your history stack 
 
 #  IF YOU REALLY WANT TO.

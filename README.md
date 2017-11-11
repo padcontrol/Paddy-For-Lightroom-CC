@@ -6,7 +6,7 @@ Putting this patch out there because it may help others. Especially those with w
 
 A friend asked for help with making Paddy work with Lightroom CC (v6, 2015.x). There are things he did via Paddy with keyboards and a G13 keypad that the newer MIDI2LR does not do. I wanted to try out LRCC (had been staying with LR5), and have used Paddy, so why not. 
 
-Went spaghetti code diving and patched up the last Paddy 5.x  beta release to make it work sufficiently for his and my test purposes. 
+Went spaghetti code diving and patched up the last Paddy 5.x  beta release to make it work sufficiently for his and my test purposes. Works in Develop mode. Adjustments in Library are not fixed.
 
 Paddy was an admirable effort. Author "dorfl" had stated he was not a programmer. And the code echoed the statement. Inconsistent naming, mixture of functions and code blocks reused inline, adding strings of text with numbers expecting numbers, all globals, etcetera. And an unnecessarily complicated design with indirection layers, probably a second-system effect of sorts. Something that evolved from doing a task well to a distraction of new features, and it shows in the code. New features over bugs.  But it sorta worked, with good intentions. Author "dorfl" has moved on per the Paddy site. But it was CC BSD licensed, so we're going to have a crack at making it work.
 

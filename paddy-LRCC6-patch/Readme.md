@@ -4,17 +4,15 @@ Are you sure you want to try this? Due to the nature of how Paddy works at start
 
 No assurances that it will work for you. Worked for one other person I know, worked for me. On Win7/LR CC v6 (2015.10), Win10/LR CC v6 (2015.10), Win10/LR CC v6 (2015.13, this is the last known update as of 2017 October); English. 
 
-Not tested and likely to have issues with LR6 non-CC version.  Do not try.
+Not tested and likely to have issues with LR6 non-CC version. 
 
-Will very likely cause issues with LR Classic CC (version 7). Do not try.
-
-Sure you don't want to just use a different option?
+Will very likely cause issues with LR Classic CC (version 7). 
 
 ## Requirements and Recommendations
 
-* Paddy, the last LR5 beta, already installed and working for you in LR 5.x. It should have been obtained from sourceforge, Paddy.lrdevplugin 5.2Beta2.zip.
-* Even in LR 5.x, some sliders will not focus correctly with Paddy-LR5 if you did changes such as changing Tone Curve items.
-* Have LR CC 6 working, but Paddy disabled (Paddy-LR5 should complain and not want to start). Have a test catalog of one image.
+* Paddy, the last LR5 beta, installed and working for you in LR 5.x. "Latest" on sourceforge was Paddy.lrdevplugin 5.2Beta2.zip.
+* Even in LR 5.x, some sliders will not focus correctly with Paddy-LR5.
+* Have LR CC 6, but Paddy disabled (Paddy-LR5 should complain first start and exit itself). Have a test catalog of one image.
 * LR set to English. The old code attempted to be multi-language. On examination, even the German preferred translations in Paddy-LR5 were lagging and items still existed that were hardcoded. All other languages were in disarray. Paddy was bound to ANSI and no UTF/Unicode support.
 * IMPORTANT: Your LR interface (Library and Develop) should be set to all panels active, and all of them open. aka "Expand all panels". Not solo mode.
 * You should have a "dummy/test/virtual copy" image that you last open/close your catalog with. Paddy's "pokes" on the UI can inadvertently create some items on your history stack 

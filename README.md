@@ -18,9 +18,11 @@ Removed: quit on >LR5 check, registration.
 
 You should already have Paddy working in LR5. And it should only be complaining and exiting on LR CC startup. If this is your first encounter with "trying out Paddy", you should consider taking a look at the MIDI2LR project.
 
+Will not work if you have a Surface like product that enables LR6CC touch workspace option.
+
 This should be looked as a hack, on a hack (Paddy LR5 beta), on a runaway complication (Paddy LR4), on a well intended plan (Paddy LR3). That is, no, I did not try to refactor or tidy it up. Not worth the time. Not releasing an installer, or an easy binary. 
 
-So if you want changes and features made, by all means, attempt it, go code spelunking yourself.  But looks like no one had the mettle to do so the last two+ years. Understandably. It's easier to contribute a meatball than to understand the spaghetti.  If you want to have a crack at this yourself, hit up the sourceforge archive sources, decompile the last lr5 beta paddy, go through the old forum, find users who might have touched the sources, etc. Lots of legwork.
+So if you want changes and features made, by all means, attempt it, go code spelunking yourself.  But looks like no one had the mettle to do so the last two+ years. Understandably. It's easier to contribute a meatball than to understand the spaghetti.  If you want to have a go at this yourself, hit up the sourceforge archive sources, decompile the last lr5 beta paddy, go through the old forum, find users who might have touched the sources, etc. Lots of legwork.
 
 There will be no more fixes for this. I tried but did not upgrade to use this LR CC 2015.x version. I have used LR4, then LR5. Stayed with LR5. Used some home brewed solutions alongside Paddy. Maybe LR Classic CC. TBD.
 

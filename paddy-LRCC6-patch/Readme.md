@@ -49,5 +49,7 @@ For example. https://www.virustotal.com/#/file/60fc316ad7a9d0c67fff5e1276f7c26d5
 
 9) Copy this new paddy.exe from c:\jojodiff and overwrite (WARNING: you should have backed up in step 4) the one in %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\Paddy\
 
-10) Fire up LR6 CC 2015. Enable Paddy from plugin manager. Paddy should no longer complain about not being in LR5. Be patient and let it do it's UI scanning. If Paddy starts in suspended mode (paddy icon with a strikethrough in the task icon area), right click on the icon and restart it. When done, you should be set to use it just like you did with LR5. In the assignment preferences, you should have one new option that allows you to assign a hotkey to selecting the Dehaze slider.
+10) There is a file named English.plf4. Download this and replace the one in %appdata%\Adobe\Lightroom\Modules\Paddy.lrdevplugin\Paddy\Resources to see the Dehaze (selection only) option.
+
+11) Fire up LR6 CC 2015. Enable Paddy from plugin manager. Paddy should no longer complain about not being in LR5. Be patient and let it do it's UI scanning. If Paddy starts in suspended mode (paddy icon with a strikethrough in the task icon area), right click on the icon and restart it. When done, you should be set to use it just like you did with LR5. In the assignment preferences, you should have one new option that allows you to assign a hotkey to selecting the Dehaze slider.
 

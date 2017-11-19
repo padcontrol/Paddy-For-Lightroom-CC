@@ -1,3 +1,6 @@
+_update Nov 2017: version for LR Classic CC (7). Contact me if interested in testing. padcontrol at protonmail [dot] com_
+
+
 ## Paddy for Lightroom CC 
 
 Putting this patch out there because it may help others. Especially those with workflows containing a lot of photos. Providing it without an easy install because you must really want it.
